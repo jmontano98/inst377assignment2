@@ -20,9 +20,9 @@ function displayMatches(){
         //const cityName = obj.city.replace(regex, `<span class="hl">${this.value}</span>`);
         return `
             <li>
-                <span class="name">${obj.name} | </span>
-                <span class="location">${obj.address_line_1}, ${obj.city} | </span>
-                <span class="category">${obj.category} | </span>
+                <span class="name">${obj.name}</span><br>
+                <span class="location">${obj.address_line_1}, ${obj.city}</span><br>
+                <span class="category">${obj.category}</span><br>
                 <span class="zipcode">${obj.zip}</span>
             </li>
         `;
