@@ -9,21 +9,20 @@ fetch(endpoint)
 function findMatches(wordToMatch, restaurants) {
     return restaurants.filter(obj => {
         const regex = new RegExp(wordToMatch, 'gi');
-        return obj.city.match(regex) || obj.address_line_1.match(regex) || obj.name.match(regex) || obj.category.match(regex) ||obj.zip.match(regex)
+        return obj.address_line_1.match(regex) || obj.name.match(regex) || obj.category.match(regex) || obj.zip.match(regex) || obj.rodent_and_insects.match(regex)
     })
 }
 
 function displayMatches(){
     const matchArray = findMatches(this.value, restaurants);
     const html = matchArray.map(obj => {
-        //const regex = new RegExp(this.value, 'gi');
-        //const cityName = obj.city.replace(regex, `<span class="hl">${this.value}</span>`);
         return `
             <li>
                 <span class="name">${obj.name}</span><br>
                 <span class="location">${obj.address_line_1}, ${obj.city}</span><br>
                 <span class="category">${obj.category}</span><br>
-                <span class="zipcode">${obj.zip}</span>
+                <span class="zipcode">${obj.zip}</span><br>
+                <span class="rodents">Rodents/Insect Compliance?: ${obj.rodent_and_insects}</span>
             </li>
         `;
     }).join('');
