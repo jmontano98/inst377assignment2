@@ -30,6 +30,7 @@ function displayMatches(){
     suggestions.innerHTML = html;
 
 }
+// comment
 
 const searchInput = document.querySelector('.textInput');
 const suggestions = document.querySelector('.suggestions');
