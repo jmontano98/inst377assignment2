@@ -1,8 +1,32 @@
 body {
-  background: rgb(255, 254, 254);
+  background: lightskyblue !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 
-.wrapper {
+.wrapper .header .filtered {
+  text-align: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+}
+
+form {
+  text-align: center;
+}
+
+.header {
+  padding-top: 60px;
+}
+
+input {
+  text-align: center;
+}
+
+.result {
+  font-size: 1.3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(lightgray, lightblue)
 }

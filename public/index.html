@@ -1,28 +1,40 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2 Jefferson Montano, Saul Sallah</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="wrapper">
-      <div class="container flex-outer">
-        <div class="header">
-            <h1>Assignment 2</h1>
-        </div>
-        <form>
-            <input type="text" placeholder="Please enter in BLANK" class="textInput"></input>
-            <div class="filtered">
-                <ul class="suggestions">
-                    <li>
-                        Start typing for a suggestion!
-                    </li>
-                </ul>
+        <div class="container flex-outer">
+            <div class="header row justify-content-center">
+                <h1>Assignment 2</h1>
             </div>
-        </form>
-      </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="Search">Search:</label>
+                            <input type="text" placeholder="Start typing for a suggestion!" class="form-control textInput">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="filtered">
+                    <ul class="suggestions">
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
