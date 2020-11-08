@@ -14,20 +14,24 @@ function findMatches(wordToMatch, restaurants) {
 }
 
 function displayMatches(){
+    
     const matchArray = findMatches(this.value, restaurants);
     const html = matchArray.map(obj => {
         return `
-            <li>
+            <div class="result">
                 <span class="name">${obj.name}</span><br>
                 <span class="location">${obj.address_line_1}, ${obj.city}</span><br>
                 <span class="category">${obj.category}</span><br>
                 <span class="zipcode">${obj.zip}</span><br>
                 <span class="rodents">Rodents/Insect Compliance?: ${obj.rodent_and_insects}</span>
-            </li>
+            </div>
         `;
     }).join('');
 
     suggestions.innerHTML = html;
+    if (this.value == "") {
+        suggestions.innerHTML = "";
+    }
 
 }
 
